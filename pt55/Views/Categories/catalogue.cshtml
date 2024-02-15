@@ -1,0 +1,35 @@
+﻿@model IEnumerable<pt55.Models.Categories>
+
+@{
+    ViewData["Title"] = "catalogue";
+}
+
+<link href="~/css/cata.css" rel="stylesheet" />
+
+<h1>catalogue</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        @item.Name
+                    </div>
+                    <div class="card-body">
+                        <img src="~/images/@item.imgfile" height="150" /> <br />
+                        
+                    </div>
+                    <div class="card-footer">
+                        <a asp-controller="catalogue" asp-action="Index" asp-route-id="@item.Id">Red more about health </a>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-controller="catalogue" asp-action="Index" >Red more about behaviour</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

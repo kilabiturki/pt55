@@ -1,0 +1,52 @@
+﻿@model pt55.Models.Services
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+<h1>Create</h1>
+
+<h4>Services</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Search" class="control-label"></label>
+                <input asp-for="Search" class="form-control" />
+                <span asp-validation-for="Search" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Advices" class="control-label"></label>
+                <input asp-for="Advices" class="form-control" />
+                <span asp-validation-for="Advices" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diseases" class="control-label"></label>
+                <input asp-for="Diseases" class="form-control" />
+                <span asp-validation-for="Diseases" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locations" class="control-label"></label>
+                <input asp-for="Locations" class="form-control" />
+                <span asp-validation-for="Locations" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clips" class="control-label"></label>
+                <input asp-for="Clips" class="form-control" />
+                <span asp-validation-for="Clips" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
